@@ -1,0 +1,16 @@
+GFX_FUNCTIONS.c:7:6:drawPixel	1
+GFX_FUNCTIONS.c:12:6:fillRect	1
+GFX_FUNCTIONS.c:31:6:writePixel	1
+GFX_FUNCTIONS.c:36:6:writeLine	7
+GFX_FUNCTIONS.c:76:7:drawFastVLine	1
+GFX_FUNCTIONS.c:80:7:drawFastHLine	1
+GFX_FUNCTIONS.c:85:6:drawLine	5
+GFX_FUNCTIONS.c:98:6:drawCircle	3
+GFX_FUNCTIONS.c:132:6:drawCircleHelper	7
+GFX_FUNCTIONS.c:168:6:fillCircleHelper	9
+GFX_FUNCTIONS.c:205:6:fillCircle	1
+GFX_FUNCTIONS.c:213:6:drawRect	1
+GFX_FUNCTIONS.c:221:6:drawRoundRect	2
+GFX_FUNCTIONS.c:238:6:fillRoundRect	2
+GFX_FUNCTIONS.c:250:6:drawTriangle	1
+GFX_FUNCTIONS.c:258:6:fillTriangle	14

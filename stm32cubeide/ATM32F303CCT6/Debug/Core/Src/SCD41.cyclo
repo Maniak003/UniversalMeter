@@ -1,0 +1,12 @@
+SCD41.c:6:6:setSleepMode	2
+SCD41.c:12:10:performSelfTest	1
+SCD41.c:19:6:moduleReinit	1
+SCD41.c:24:6:performFactoryReset	1
+SCD41.c:33:6:measureSingleShot	3
+SCD41.c:42:6:enablePeriodMeasure	2
+SCD41.c:52:6:getDataReadyStatus	2
+SCD41.c:61:6:persistSettings	1
+SCD41.c:66:6:getSerialNumber	2
+SCD41.c:80:6:SCDwriteData	1
+SCD41.c:84:8:SCDreadData	1
+SCD41.c:90:6:readMeasurement	1

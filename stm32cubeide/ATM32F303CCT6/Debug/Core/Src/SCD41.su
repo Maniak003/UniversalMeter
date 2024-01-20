@@ -1,0 +1,12 @@
+../Core/Src/SCD41.c:6:6:setSleepMode	16	static
+../Core/Src/SCD41.c:12:10:performSelfTest	16	static
+../Core/Src/SCD41.c:19:6:moduleReinit	8	static
+../Core/Src/SCD41.c:24:6:performFactoryReset	8	static
+../Core/Src/SCD41.c:33:6:measureSingleShot	16	static
+../Core/Src/SCD41.c:42:6:enablePeriodMeasure	32	static
+../Core/Src/SCD41.c:52:6:getDataReadyStatus	16	static
+../Core/Src/SCD41.c:61:6:persistSettings	8	static
+../Core/Src/SCD41.c:66:6:getSerialNumber	32	static
+../Core/Src/SCD41.c:80:6:SCDwriteData	40	static
+../Core/Src/SCD41.c:84:8:SCDreadData	40	static
+../Core/Src/SCD41.c:90:6:readMeasurement	32	static

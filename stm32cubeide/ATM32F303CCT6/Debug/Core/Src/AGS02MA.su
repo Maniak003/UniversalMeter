@@ -1,0 +1,3 @@
+../Core/Src/AGS02MA.c:4:10:AGS02MA_getFirmwareVersion	16	static
+../Core/Src/AGS02MA.c:13:10:AGS02MA_getTVOC	16	static
+../Core/Src/AGS02MA.c:45:6:AGS02MA_readReg	40	static
