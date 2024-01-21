@@ -38,7 +38,7 @@ char text1306[18];
 uint16_t ze08_value;
 //uint8_t Data_Buffer[9];
 uint8_t PM25_buffer[32];
-float temperature, pressure, humidity, bataryValue = 0, soundPress = 52, lucmeter = 1150;
+float temperature, pressure, humidity, bataryValue = 0, soundPress = 48.2f, MAX44009_lux = 1150;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -159,6 +159,9 @@ int main(void)
   scint_counter = 0;
   scint_timer = CO2Counter;
 
+  MAX44009_Init(&MAX44009_PORT);
+  MAX44009_ContinuousMode(1);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -268,17 +271,17 @@ int main(void)
 			uint16_t part50  = PM25_buffer[24] << 8 | PM25_buffer[25];
 			uint16_t part100 = PM25_buffer[26] << 8 | PM25_buffer[27];
 
-			sprintf(text1306, "PM03 :%u  ", part03);
+			sprintf(text1306, "PM0.3 :%u  ", part03);
 			ST7735_WriteString(0, 55, text1306, Font_7x10, ST7735_WHITE, ST7735_BLACK);
-			sprintf(text1306, "PM05 :%u  ", part05);
+			sprintf(text1306, "PM0.5 :%u  ", part05);
 			ST7735_WriteString(0, 66, text1306, Font_7x10, ST7735_WHITE, ST7735_BLACK);
-			sprintf(text1306, "PM10 :%u  ", part10);
+			sprintf(text1306, "PM1.0 :%u  ", part10);
 			ST7735_WriteString(0, 77, text1306, Font_7x10, ST7735_WHITE, ST7735_BLACK);
-			sprintf(text1306, "PM25 :%u  ", part25);
+			sprintf(text1306, "PM2.5 :%u  ", part25);
 			ST7735_WriteString(0, 88, text1306, Font_7x10, ST7735_WHITE, ST7735_BLACK);
-			sprintf(text1306, "PM50 :%u  ", part50);
+			sprintf(text1306, "PM5.0 :%u  ", part50);
 			ST7735_WriteString(0, 99, text1306, Font_7x10, ST7735_WHITE, ST7735_BLACK);
-			sprintf(text1306, "PM100:%u  ", part100);
+			sprintf(text1306, "PM10  :%u  ", part100);
 			ST7735_WriteString(0, 110, text1306, Font_7x10, ST7735_WHITE, ST7735_BLACK);
 		}
 
@@ -294,11 +297,15 @@ int main(void)
 
 
 		/* Звуковое давление */
-		sprintf(text1306, "Sound :%0.1fdb", soundPress);
+		sprintf(text1306, "Sound :%0.1f db", soundPress);
 		ST7735_WriteString(0, 121, text1306, Font_7x10, ST7735_WHITE, ST7735_BLACK);
 
 		/* Освещенность */
-		sprintf(text1306, "Illum :%0.0flux", lucmeter);
+		if(MAX44009_OK == MAX44009_ReadLightHighResolution(&MAX44009_lux)) {
+			sprintf(text1306, "Illum :%0.1f lux   ", MAX44009_lux);
+		} else {
+			sprintf(text1306, "Illum :%0.0f lux   ", 0.0f);
+		}
 		ST7735_WriteString(0, 132, text1306, Font_7x10, ST7735_WHITE, ST7735_BLACK);
 
 		HAL_Delay(1000);

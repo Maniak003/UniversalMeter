@@ -40,6 +40,7 @@ extern "C" {
 #include "AGS02MA.h"
 #include "ZE08.h"
 #include "PM25.h"
+#include "max44009.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

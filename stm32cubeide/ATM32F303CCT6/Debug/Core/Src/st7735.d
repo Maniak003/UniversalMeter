@@ -36,7 +36,7 @@ Core/Src/st7735.o: ../Core/Src/st7735.c \
  ../Core/Inc/st7735.h ../Core/Inc/main.h ../Core/Inc/st7735.h \
  ../Core/Inc/GFX_FUNCTIONS.h ../Core/Inc/ST7735_fonts.h \
  ../Core/Inc/SCD41.h ../Core/Inc/BME280.h ../Core/Inc/AGS02MA.h \
- ../Core/Inc/ZE08.h ../Core/Inc/PM25.h
+ ../Core/Inc/ZE08.h ../Core/Inc/PM25.h ../Core/Inc/max44009.h
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:
 ../Core/Inc/stm32f3xx_hal_conf.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:
@@ -81,3 +81,4 @@ Core/Src/st7735.o: ../Core/Src/st7735.c \
 ../Core/Inc/AGS02MA.h:
 ../Core/Inc/ZE08.h:
 ../Core/Inc/PM25.h:
+../Core/Inc/max44009.h:

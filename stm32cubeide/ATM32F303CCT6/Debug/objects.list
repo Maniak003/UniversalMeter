@@ -6,6 +6,7 @@
 "./Core/Src/ST7735_fonts.o"
 "./Core/Src/ZE08.o"
 "./Core/Src/main.o"
+"./Core/Src/max44009.o"
 "./Core/Src/st7735.o"
 "./Core/Src/stm32f3xx_hal_msp.o"
 "./Core/Src/stm32f3xx_it.o"

@@ -13,6 +13,7 @@ C_SRCS += \
 ../Core/Src/ST7735_fonts.c \
 ../Core/Src/ZE08.c \
 ../Core/Src/main.c \
+../Core/Src/max44009.c \
 ../Core/Src/st7735.c \
 ../Core/Src/stm32f3xx_hal_msp.c \
 ../Core/Src/stm32f3xx_it.c \
@@ -29,6 +30,7 @@ OBJS += \
 ./Core/Src/ST7735_fonts.o \
 ./Core/Src/ZE08.o \
 ./Core/Src/main.o \
+./Core/Src/max44009.o \
 ./Core/Src/st7735.o \
 ./Core/Src/stm32f3xx_hal_msp.o \
 ./Core/Src/stm32f3xx_it.o \
@@ -45,6 +47,7 @@ C_DEPS += \
 ./Core/Src/ST7735_fonts.d \
 ./Core/Src/ZE08.d \
 ./Core/Src/main.d \
+./Core/Src/max44009.d \
 ./Core/Src/st7735.d \
 ./Core/Src/stm32f3xx_hal_msp.d \
 ./Core/Src/stm32f3xx_it.d \
@@ -60,7 +63,7 @@ Core/Src/%.o Core/Src/%.su Core/Src/%.cyclo: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/AGS02MA.cyclo ./Core/Src/AGS02MA.d ./Core/Src/AGS02MA.o ./Core/Src/AGS02MA.su ./Core/Src/BME280.cyclo ./Core/Src/BME280.d ./Core/Src/BME280.o ./Core/Src/BME280.su ./Core/Src/GFX_FUNCTIONS.cyclo ./Core/Src/GFX_FUNCTIONS.d ./Core/Src/GFX_FUNCTIONS.o ./Core/Src/GFX_FUNCTIONS.su ./Core/Src/PM25.cyclo ./Core/Src/PM25.d ./Core/Src/PM25.o ./Core/Src/PM25.su ./Core/Src/SCD41.cyclo ./Core/Src/SCD41.d ./Core/Src/SCD41.o ./Core/Src/SCD41.su ./Core/Src/ST7735_fonts.cyclo ./Core/Src/ST7735_fonts.d ./Core/Src/ST7735_fonts.o ./Core/Src/ST7735_fonts.su ./Core/Src/ZE08.cyclo ./Core/Src/ZE08.d ./Core/Src/ZE08.o ./Core/Src/ZE08.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/st7735.cyclo ./Core/Src/st7735.d ./Core/Src/st7735.o ./Core/Src/st7735.su ./Core/Src/stm32f3xx_hal_msp.cyclo ./Core/Src/stm32f3xx_hal_msp.d ./Core/Src/stm32f3xx_hal_msp.o ./Core/Src/stm32f3xx_hal_msp.su ./Core/Src/stm32f3xx_it.cyclo ./Core/Src/stm32f3xx_it.d ./Core/Src/stm32f3xx_it.o ./Core/Src/stm32f3xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f3xx.cyclo ./Core/Src/system_stm32f3xx.d ./Core/Src/system_stm32f3xx.o ./Core/Src/system_stm32f3xx.su
+	-$(RM) ./Core/Src/AGS02MA.cyclo ./Core/Src/AGS02MA.d ./Core/Src/AGS02MA.o ./Core/Src/AGS02MA.su ./Core/Src/BME280.cyclo ./Core/Src/BME280.d ./Core/Src/BME280.o ./Core/Src/BME280.su ./Core/Src/GFX_FUNCTIONS.cyclo ./Core/Src/GFX_FUNCTIONS.d ./Core/Src/GFX_FUNCTIONS.o ./Core/Src/GFX_FUNCTIONS.su ./Core/Src/PM25.cyclo ./Core/Src/PM25.d ./Core/Src/PM25.o ./Core/Src/PM25.su ./Core/Src/SCD41.cyclo ./Core/Src/SCD41.d ./Core/Src/SCD41.o ./Core/Src/SCD41.su ./Core/Src/ST7735_fonts.cyclo ./Core/Src/ST7735_fonts.d ./Core/Src/ST7735_fonts.o ./Core/Src/ST7735_fonts.su ./Core/Src/ZE08.cyclo ./Core/Src/ZE08.d ./Core/Src/ZE08.o ./Core/Src/ZE08.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/max44009.cyclo ./Core/Src/max44009.d ./Core/Src/max44009.o ./Core/Src/max44009.su ./Core/Src/st7735.cyclo ./Core/Src/st7735.d ./Core/Src/st7735.o ./Core/Src/st7735.su ./Core/Src/stm32f3xx_hal_msp.cyclo ./Core/Src/stm32f3xx_hal_msp.d ./Core/Src/stm32f3xx_hal_msp.o ./Core/Src/stm32f3xx_hal_msp.su ./Core/Src/stm32f3xx_it.cyclo ./Core/Src/stm32f3xx_it.d ./Core/Src/stm32f3xx_it.o ./Core/Src/stm32f3xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f3xx.cyclo ./Core/Src/system_stm32f3xx.d ./Core/Src/system_stm32f3xx.o ./Core/Src/system_stm32f3xx.su
 
 .PHONY: clean-Core-2f-Src
 
